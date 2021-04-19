@@ -259,34 +259,6 @@ blue "下载完成"
 bash "/root/nezha.sh"
 }
 
-#Aria2 最强安装与管理脚本
-function aria(){
-wget -O "/root/aria2.sh" "https://raw.githubusercontent.com/P3TERX/aria2.sh/master/aria2.sh" --no-check-certificate -T 30 -t 5 -d
-chmod +x "/root/aria2.sh"
-chmod 777 "/root/aria2.sh"
-blue "你也可以输入 bash /root/aria2.sh 来手动运行"
-blue "下载完成"
-bash "/root/aria2.sh"
-}
-
-#MTP&TLS 一键脚本
-function mtp(){
-wget -O "/root/mtp.sh" "https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh" --no-check-certificate -T 30 -t 5 -d
-chmod +x "/root/mtp.sh"
-chmod 777 "/root/mtp.sh"
-blue "你也可以输入 bash /root/mtp.sh 来手动运行"
-blue "下载完成"
-bash "/root/mtp.sh"
-}
-
-#V2UI 一键脚本
-function v2ui(){
-echo
-red "根据相关法律法规，本脚本不提供直接安装"
-echo
-blue " 请自行输入 bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh) 来手动运行"
-echo
-}
 
 #宝塔面板 官方版·一键安装
 function btnew(){
@@ -397,10 +369,6 @@ function start_menu(){
     green " 25. 三网Speedtest测速"
     green " 26. Memorytest 内存压力测试"
     yellow " --------------------------------------------------"
-    green " 31. MTP&TLS 一键脚本"
-    green " 32. V2UI 一键脚本"
-    green " 33. Aria2 最强安装与管理脚本"
-    yellow " --------------------------------------------------"
     green " 41. 宝塔面板 官方版·一键安装"
     green " 42. 宝塔面板 官方版·一键更新"
     green " 43. 宝塔面板 5.9开源免费版·一键安装"
@@ -472,15 +440,6 @@ function start_menu(){
 	;;
 	26 )
            memorytest
-	;;
-	31 )
-           mtp
-	;;
-	32 )
-           v2ui
-	;;
-        33 )
-           aria
 	;;
 	41 )
            btnew
