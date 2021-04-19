@@ -25,15 +25,6 @@ blue "下载完成"
 blue "输入 bash /root/ipv.sh 来运行"
 }
 
-#IPT.SH iptable一键脚本·下载
-function iptsh(){
-wget -O "/root/ipt.sh" "https://raw.githubusercontent.com/BlueSkyXN/ChangeSource/master/ipt.sh" --no-check-certificate -T 30 -t 5 -d
-chmod +x "/root/ipt.sh"
-chmod 777 "/root/ipt.sh"
-blue "下载完成"
-blue "输入 bash /root/ipt.sh 来运行"
-}
-
 #Speedtest for Linux·下载
 function speedtest-linux(){
 wget -O "/root/speedtest" "https://raw.githubusercontent.com/BlueSkyXN/ChangeSource/master/speedtest" --no-check-certificate -T 30 -t 5 -d
@@ -347,7 +338,6 @@ function start_menu(){
     green " https://www.blueskyxn.com/202104/4465.html "
     yellow " =================================================="
     green " 1. IPV.SH ipv4/6优先级调整一键脚本·下载" 
-    green " 2. IPT.SH iptable一键脚本"
     green " 3. SpeedTest-Linux 下载"
     green " 4. Rclone&Fclone·下载" 
     green " 5. ChangeSource Linux换源脚本·下载"
@@ -383,9 +373,6 @@ function start_menu(){
     case "$menuNumberInput" in
         1 )
            ipvsh
-	;;
-        2 )
-           iptsh
 	;;
         3 )
            speedtest-linux
